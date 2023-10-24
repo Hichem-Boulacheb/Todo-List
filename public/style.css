@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Poppins:wght@200&family=Roboto:wght@100&display=swap');
+
+#date{
+    color: white;
+    background-color: #A683E3;
+    padding: 10px 50px 10px 50px;
+    border-radius: 7px;
+    font-size: 2.4rem;
+    @media (max-width:500px) {
+        font-size: 2.3rem;
+    }
+}
+html {
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    min-height: 1000px;
+    font-family: 'Poppins', sans-serif;;
+  }
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.task{
+    display: flex;
+    font-size: 1.4rem;
+    gap: 1.8rem;
+}
+#list{
+    background-color: white;
+    margin-top: 3%;
+    box-shadow: 5px 5px 15px -5px gray;
+    border-radius: 10px;
+}
+#submit{
+    display: flex;
+    margin-top: 2rem;
+}
+#add_button{
+    
+    background-color: #A683E3;
+    border-radius: 50%;
+    border: 0px;
+    color: white;
+    font-size: 1.9rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+#task_input{
+    width: 26rem;
+    outline: none;
+    border: none;
+    margin-bottom: 2px;
+    margin-left: 1.5rem;
+    font-size: 1.4rem;
+}
+#task_input::placeholder{
+    font-size: 1.6rem;
+    text-align: center;
+}
+footer{
+    color: #4F4A45;
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.3rem;
+}
+.checked{
+    text-decoration: line-through;
+}
+.clicked{
+    border-bottom: 3px solid #A683E3 !important;
+}
+.btn{
+    background-color: white;
+    border: none;
+    font-size: 1.5rem;
+    color: red;
+    
+}
+p{
+    width: 70%;
+}
+form{
+    display: flex;
+}

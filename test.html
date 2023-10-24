@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./public/style.css">
+    <title>To do list</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="date">wednesday, October 18</h1>
+        <div id="list">
+            <div class="task">
+                <input type="checkbox" id="check1">
+                <p id="p1">buy food</p>
+                <form action="/remove" method="post">
+                    <button type="submit" class="btn" id="btn1">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="check2">
+                <p id="p2">cook food</p>
+                <form action="/remove" method="post">
+                    <button type="submit" class="btn" id="btn2">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="check3">
+                <p id="p3">eat food</p>
+                <form action="/remove" method="post">
+                    <button type="submit" class="btn" id="btn3">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </form>
+            </div>
+            <div id="submit">
+                <input type="text" placeholder="New Item" id="task_input">
+                <button type="submit" id="add_button">+</button>
+            </div>
+        </div>
+        <footer>
+            copyright 2023 Hichem
+        </footer>
+        <script src="https://kit.fontawesome.com/f204fdccb5.js" crossorigin="anonymous"></script>
+        <script src="./public/index.js"></script>
+    </div>
+    
+</body>
+</html>

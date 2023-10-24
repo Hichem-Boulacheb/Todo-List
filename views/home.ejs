@@ -1,0 +1,39 @@
+<%- include("header.ejs") %>
+<div id="container">
+    <% if(locals.day){ %>
+    <h1 id="date"><%= day %>, <%= month %> <%= year %></h1>
+    <% }else{ %>
+        <h1 id="date"><%= list %></h1>
+    <% } %>
+    <div id="list">
+        <% for(i=0;i<tasks.length;i++){ %>
+        <div class="task">
+            <input type="checkbox" id="check<%= i+1 %>">
+            <p id="p<%= i+1 %>"><%= tasks[i].name %></p>
+            <form action="/remove" method="post">
+
+                <button type="submit" name="button" value="<%= tasks[i]._id.toString() %>" class="btn">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+                <% if(locals.day){ %>
+                <input type="hidden" name="list" value="today">
+                <% }else{ %>
+                <input type="hidden" name="list" value="<%= list %>">
+                <% } %>
+            </form>
+        </div>
+        <% } %>
+        <form method="POST" action="/add">
+            <div id="submit">
+                <input type="text" placeholder="New Item" id="task_input" name="new_task">
+                <% if(locals.day){ %>
+                <button type="submit" id="add_button" name="list" value="today">+</button>
+                <% }else{ %>
+                <button type="submit" id="add_button" name="list" value="<%= list %>">+</button>  
+                <% } %>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="index.js"></script>
+<%- include("footer.ejs") %>
