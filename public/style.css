@@ -14,6 +14,7 @@ html {
     background-color: #E4E9FD;
     background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
     min-height: 1000px;
+    /* min-height: 739px; */
     font-family: 'Poppins', sans-serif;;
   }
 #container{
@@ -26,6 +27,13 @@ html {
     font-size: 1.4rem;
     gap: 1.8rem;
 }
+.task:hover{
+    background-color: #EBE3D5;
+
+}
+.task:hover .btn{
+    background-color: #EBE3D5;
+}
 #list{
     background-color: white;
     margin-top: 3%;
@@ -36,8 +44,7 @@ html {
     display: flex;
     margin-top: 2rem;
 }
-#add_button{
-    
+#add_button{ 
     background-color: #A683E3;
     border-radius: 50%;
     border: 0px;
@@ -45,6 +52,7 @@ html {
     font-size: 1.9rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
+
 #task_input{
     width: 26rem;
     outline: none;
@@ -74,7 +82,7 @@ footer{
     border: none;
     font-size: 1.5rem;
     color: red;
-    
+    cursor: pointer;
 }
 p{
     width: 70%;
