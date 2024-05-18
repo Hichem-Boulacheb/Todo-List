@@ -2,8 +2,10 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import _ from "lodash";
+import dotenv from "dotenv";
+dotenv.config();
 
-mongoose.connect("mongodb+srv://Boulacheb_Hichem:hichem12345@cluster0.caxicdw.mongodb.net/todolistDb");
+mongoose.connect(process.env.DB_URL);
 
 const port=3000;
 const app=express();
